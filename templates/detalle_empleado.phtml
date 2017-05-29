@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Empleados</title>
+    </head>
+    <body>
+        <table border="1">
+
+           
+        <?php
+        foreach ($a_employees as $employee) {
+            //print_r($employee);?>
+            <tr>
+                <td>Nombre:</td>
+                <td><?=$employee['name'];?></td>
+               
+            </tr>
+             <tr>
+                <td>Email:</td>
+                <td><?=$employee['email'];?></td>
+               
+            </tr>
+             <tr>
+                <td>Telefono:</td>
+                <td><?=$employee['phone'];?></td>
+              
+            </tr>
+            <tr>
+                <td>Direccion:</td>
+                <td><?=$employee['address'];?></td>
+              
+            </tr>
+             <tr>
+                <td>Posicion:</td>
+                <td><?=$employee['position'];?></td>
+            </tr>
+             <tr>
+                <td>Salario:</td>
+                <td><?=$employee['salary'];?></td>
+            </tr>
+             <tr>
+                <td>Habilidades:</td>
+                <td><?php echo "<pre>";print_r($employee['skills']);echo "</pre>";?></td>
+            </tr>
+          
+            <?php
+        }
+        ?>
+        </table>
+    </body>
+</html>
